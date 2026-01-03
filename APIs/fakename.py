@@ -1,12 +1,11 @@
 # Import modules for FakeName Script
-# --> Requests for communicating with internet via machine to pull data
 import requests
 import os
 
-# Very simple Clear prompt function
-# If OS name is "New Technology" (Microsoft) -> Run 'cls'
-# Otherwise, run 'clear' (Linux, Ubuntu, Mac OSX)
+# Very standard/universal Clear function
 def Clear():
+    # If OS name is "New Technology" (Microsoft) -> Run 'cls'
+    # Otherwise, run 'clear' (Linux, Ubuntu, Mac OSX)
     os.system('cls' if os.name == "nt" else 'clear')
 
 # FakeName Function -> Displays generated data via API call
@@ -48,7 +47,7 @@ def nameGen():
         gender = "male"
         url = f"https://randomuser.me/api?gender={gender}"
         data = requests.get(url).json()
-        print("Gender set to: " + data['results'][0]['gender'])
+        print(f"Gender set to: {data['results'][0]['gender']}")
         print(" ")
         proceed = input("Ready to proceed? [PRESS ANY KEY]")
         Clear()
