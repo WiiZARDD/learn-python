@@ -95,6 +95,6 @@ def menu():
 #menu()
 
 # Prevent stack buildup...
-if __name__ == __main__:
+if __name__ == "__main__":
     while True:
         menu()
