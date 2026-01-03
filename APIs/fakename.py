@@ -17,11 +17,11 @@ def fakeName(gender, url):
     # Purpose of for loop: To practice 
     for i in range(1):
         print(data["results"][0]["name"]["first"] + " " + data["results"][0]["name"]["last"] + " " + f'[{data["results"][0]["name"]["title"]}]')
-        Sex = data["results"][0]["gender"]
-        Sex_first = Sex[0].upper()
-        Sex_rest = Sex[1:len(Sex)]
+        fakeGender = data["results"][0]["gender"]
+        fakeGender_first = fakeGender[0].upper()
+        fakeGender_rest = fakeGender[1:len(fakeGender)]
         # All FakeName information (Gender, Location, City, State, Country, more coming soon...)
-        print("Gender: " + Sex_first + Sex_rest)
+        print("Gender: " + fakeGender_first + fakeGender_rest)
         print("Location: " + str(data['results'][0]['location']['street']['number']) + " " + data["results"][0]["location"]["street"]["name"])
         print("City: " + data["results"][0]["location"]["city"])
         print("State: " + data["results"][0]["location"]["state"])
