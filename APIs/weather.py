@@ -64,7 +64,7 @@ def weather(url, zipcode):
     # Initiate return to menu prompt
     main = input("Press any key to return to the menu...")
     Clear()
-    menu()
+    return
 
 # Main menu function
 # Allows user to input zipcode -> This will be used in API call to fetch real time data
@@ -92,4 +92,9 @@ def menu():
         print("Must be digits!")
 
 # Begin the main script
-menu()
+#menu()
+
+# Prevent stack buildup...
+if __name__ == __main__:
+    while True:
+        menu()
